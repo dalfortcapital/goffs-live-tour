@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <pattern id="panel" width="720" height="30" patternUnits="userSpaceOnUse">
+      <rect width="720" height="30" fill="#D9DFE6"/>
+      <path d="M0 29.5H720" stroke="#C3CBD4" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="haz" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="18" height="18" fill="#1A1F26"/><rect width="9" height="18" fill="#F5B700"/>
+    </pattern>
+    <linearGradient id="trl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7F9FB"/>
+      <stop offset="1" stop-color="#E3E8ED"/>
+    </linearGradient>
+  </defs>
+  <!-- building wall -->
+  <rect width="720" height="430" fill="url(#panel)"/>
+  <!-- dock face + ground -->
+  <rect y="430" width="720" height="62" fill="#B5BDC6"/>
+  <path d="M0 430.5H720" stroke="#8E99A5" stroke-width="2"/>
+  <rect y="492" width="720" height="28" fill="#7E8892"/>
+  <!-- shelter header -->
+  <rect x="106" y="28" width="508" height="86" fill="#16324F"/>
+  <g stroke="#0B1B2C" stroke-width="2">
+    <path d="M190 40V112M224 40V112M258 40V112M292 40V112M326 40V112M360 40V112M394 40V112M428 40V112M462 40V112M496 40V112M530 40V112"/>
+  </g>
+  <rect x="106" y="28" width="508" height="12" fill="#1F4468"/>
+  <!-- side pads -->
+  <rect x="106" y="28" width="84" height="412" rx="4" fill="#1F4468"/>
+  <rect x="530" y="28" width="84" height="412" rx="4" fill="#1F4468"/>
+  <!-- wear pleats (upper corners) -->
+  <g stroke="#0B1B2C" stroke-width="3" fill="none">
+    <path d="M112 40l26 26M120 36l30 30M130 34l30 30"/>
+    <path d="M608 40l-26 26M600 36l-30 30M590 34l-30 30"/>
+  </g>
+  <!-- guide stripes -->
+  <rect x="142" y="112" width="12" height="290" fill="#F5B700"/>
+  <rect x="566" y="112" width="12" height="290" fill="#F5B700"/>
+  <!-- bottom boots -->
+  <rect x="106" y="396" width="84" height="44" rx="4" fill="#0E2236"/>
+  <rect x="530" y="396" width="84" height="44" rx="4" fill="#0E2236"/>
+  <path d="M112 402H184M536 402H608" stroke="#4E6C8F" stroke-width="2" stroke-dasharray="5 4"/>
+  <!-- trailer rear -->
+  <rect x="190" y="114" width="340" height="300" fill="url(#trl)" stroke="#9AA4AE" stroke-width="2"/>
+  <path d="M360 118V412" stroke="#9AA4AE" stroke-width="3"/>
+  <g stroke="#7C8792" stroke-width="5" stroke-linecap="round">
+    <path d="M232 132V396M300 132V396M420 132V396M488 132V396"/>
+  </g>
+  <g fill="#7C8792">
+    <rect x="222" y="250" width="20" height="10" rx="2"/><rect x="290" y="250" width="20" height="10" rx="2"/>
+    <rect x="410" y="250" width="20" height="10" rx="2"/><rect x="478" y="250" width="20" height="10" rx="2"/>
+  </g>
+  <rect x="198" y="390" width="24" height="14" rx="2" fill="#C0402E"/>
+  <rect x="498" y="390" width="24" height="14" rx="2" fill="#C0402E"/>
+  <!-- trailer bed / dock blocker gap -->
+  <rect x="190" y="414" width="340" height="18" fill="#1C2229"/>
+  <rect x="200" y="418" width="320" height="10" fill="#2E3742"/>
+  <!-- ICC bar -->
+  <rect x="236" y="444" width="248" height="12" rx="2" fill="#2E3742"/>
+  <path d="M260 432V444M460 432V444" stroke="#2E3742" stroke-width="8"/>
+  <!-- tires -->
+  <rect x="200" y="440" width="34" height="52" rx="6" fill="#1A1F26"/>
+  <rect x="486" y="440" width="34" height="52" rx="6" fill="#1A1F26"/>
+  <!-- wheel chock -->
+  <polygon points="168,492 200,492 200,462" fill="#F5B700" stroke="#8F6400" stroke-width="2"/>
+  <path d="M168 492c-14 0-22 -6-28-14" stroke="#5B6672" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+  <!-- trailer restraint -->
+  <rect x="326" y="458" width="68" height="34" rx="3" fill="url(#haz)" stroke="#11161C" stroke-width="2"/>
+  <path d="M342 458V448h36v10" stroke="#11161C" stroke-width="6" fill="none" stroke-linejoin="round"/>
+  <!-- bumpers -->
+  <rect x="172" y="432" width="16" height="30" rx="2" fill="#11161C"/>
+  <rect x="532" y="432" width="16" height="30" rx="2" fill="#11161C"/>
+</svg>

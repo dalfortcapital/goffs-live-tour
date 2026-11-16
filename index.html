@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goff's Live Tour</title>
+  <meta name="description" content="A rep-driven, needs-based live product tour. The rep's screen drives the customer's screen in real time.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2236'/%3E%3Cpath d='M8 24V9h16v15M8 14h16M11 18h10M11 21h10' stroke='%23F5B700' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="landing">
+  <header class="land-hero">
+    <div class="land-inner">
+      <div class="wordmark wordmark--light"><b>GOFF’S</b><span>Live Tour</span><em class="demo-chip">Demo</em></div>
+      <h1>Walk customers through the right product, live, on their own screen.</h1>
+      <p class="land-lede">The rep drives. The customer’s screen follows in real time. The tour asks about their facility first, then branches to the product that fits, and ends with quantity, timing and next steps captured as a lead.</p>
+      <div class="land-cards">
+        <a class="land-card" href="presenter.html">
+          <span class="land-ic" data-icon="monitor"></span>
+          <span class="land-t">I’m presenting</span>
+          <span class="land-s">Open the presenter console and get a client code</span>
+          <span class="land-go" data-icon="arrowRight"></span>
+        </a>
+        <form class="land-card land-join" action="join.html" method="get">
+          <span class="land-ic" data-icon="users"></span>
+          <span class="land-t">I’m a customer</span>
+          <span class="land-s">Enter the code from your rep</span>
+          <span class="land-join-row"><input name="code" maxlength="8" placeholder="K7M4QX" autocapitalize="characters" spellcheck="false" aria-label="Client code"><button class="btn btn-primary" type="submit">Join</button></span>
+        </form>
+      </div>
+    </div>
+    <div class="stripes"></div>
+  </header>
+
+  <main class="land-body">
+    <section>
+      <h2>Try it in 60 seconds</h2>
+      <ol class="how">
+        <li><b>Open the presenter.</b> Click <i>I’m presenting</i>. You’ll get a 6-character client code.</li>
+        <li><b>Connect a customer screen.</b> Click <i>Open customer window</i> to try it alone, or open the join link on another computer or phone and enter the code.</li>
+        <li><b>Drive the tour.</b> Answer the questions, tap hotspots, flip photos. The customer’s screen follows every click.</li>
+      </ol>
+    </section>
+    <section class="land-grid">
+      <div><h3>Needs first, product second</h3><p>Three branches (doors, curtain walls, dock) each ask four discovery questions, then recommend a specific Goff’s product with reasons tied to the customer’s answers.</p></div>
+      <div><h3>Built for the rep</h3><p>A talk track for every slide, keyboard shortcuts, a running list of what’s been captured, and a one-click lead summary to copy, download or email.</p></div>
+      <div><h3>Customer can participate</h3><p>Optionally let the customer tap their own answers and fill in the scope on their screen. The rep sees it instantly.</p></div>
+      <div><h3>No server to run</h3><p>A static site. Screens sync browser to browser, so this demo costs nothing to host. See the README for what a production build adds.</p></div>
+    </section>
+    <p class="land-foot">Prototype built by DalFort Capital Partners for Goff’s Performance Solutions. Product details are summarized from goffsenterprises.com, and photos load from that site. Not for customer use until reviewed.</p>
+  </main>
+  <script type="module">
+    import { icon } from './assets/js/icons.js';
+    document.querySelectorAll('[data-icon]').forEach((el) => el.insertAdjacentHTML('afterbegin', icon(el.dataset.icon)));
+  </script>
+</body>
+</html>

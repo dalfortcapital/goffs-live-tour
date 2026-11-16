@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <pattern id="fold" width="44" height="10" patternUnits="userSpaceOnUse">
+      <rect width="44" height="10" fill="#E2AA17"/>
+      <rect width="14" height="10" fill="#EDB928"/>
+      <rect x="30" width="8" height="10" fill="#C99512"/>
+    </pattern>
+    <pattern id="mesh" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#F4F6F8"/>
+      <path d="M0 0L8 8M8 0L0 8" stroke="#9AA6B3" stroke-width="1"/>
+    </pattern>
+    <pattern id="deck" width="40" height="28" patternUnits="userSpaceOnUse">
+      <rect width="40" height="28" fill="#9CA7B3"/>
+      <rect x="20" width="20" height="28" fill="#8B97A4"/>
+    </pattern>
+    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D7EAF6" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#B8D5EA" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+  <!-- back wall -->
+  <rect width="720" height="520" fill="#EEF1F5"/>
+  <!-- roof deck + beam -->
+  <rect width="720" height="26" fill="url(#deck)"/>
+  <rect y="26" width="720" height="16" fill="#6E7A87"/>
+  <rect y="26" width="720" height="4" fill="#59646F"/>
+  <rect y="38" width="720" height="4" fill="#59646F"/>
+  <!-- threaded rods + beam clamps -->
+  <g stroke="#56616D" stroke-width="3">
+    <path d="M140 42V72M360 42V72M580 42V72"/>
+  </g>
+  <g fill="#3E4954">
+    <rect x="131" y="38" width="18" height="10" rx="2"/>
+    <rect x="351" y="38" width="18" height="10" rx="2"/>
+    <rect x="571" y="38" width="18" height="10" rx="2"/>
+  </g>
+  <!-- valance (right) -->
+  <rect x="450" y="44" width="230" height="27" fill="#D3A015" opacity=".9"/>
+  <path d="M450 44h230" stroke="#B88A0F" stroke-width="2"/>
+  <!-- track -->
+  <rect x="40" y="70" width="640" height="10" rx="2" fill="#4F5B68"/>
+  <!-- roller hooks -->
+  <g fill="#2C3540">
+    <circle cx="52" cy="85" r="4"/><circle cx="76" cy="85" r="4"/><circle cx="100" cy="85" r="4"/><circle cx="124" cy="85" r="4"/><circle cx="148" cy="85" r="4"/><circle cx="172" cy="85" r="4"/><circle cx="196" cy="85" r="4"/><circle cx="220" cy="85" r="4"/><circle cx="244" cy="85" r="4"/><circle cx="268" cy="85" r="4"/><circle cx="292" cy="85" r="4"/>
+    <circle cx="428" cy="85" r="4"/><circle cx="452" cy="85" r="4"/><circle cx="476" cy="85" r="4"/><circle cx="500" cy="85" r="4"/><circle cx="524" cy="85" r="4"/><circle cx="548" cy="85" r="4"/><circle cx="572" cy="85" r="4"/><circle cx="596" cy="85" r="4"/><circle cx="620" cy="85" r="4"/><circle cx="644" cy="85" r="4"/><circle cx="668" cy="85" r="4"/>
+  </g>
+  <!-- curtain panels -->
+  <rect x="40" y="90" width="260" height="358" fill="url(#fold)"/>
+  <rect x="420" y="90" width="260" height="358" fill="url(#fold)"/>
+  <rect x="40" y="90" width="260" height="6" fill="#B8870F"/>
+  <rect x="420" y="90" width="260" height="6" fill="#B8870F"/>
+  <!-- strip door -->
+  <g>
+    <rect x="300" y="84" width="120" height="380" fill="#3E4A57" opacity=".25"/>
+    <rect x="300" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="318" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="336" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="354" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="372" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="390" y="84" width="24" height="380" fill="url(#strip)" stroke="#8FB3D0"/>
+    <rect x="300" y="80" width="120" height="8" fill="#4F5B68"/>
+  </g>
+  <!-- filter panel -->
+  <rect x="500" y="160" width="104" height="92" fill="url(#mesh)" stroke="#5B6775" stroke-width="3"/>
+  <!-- logo panel -->
+  <rect x="84" y="250" width="176" height="62" rx="8" fill="#fff" opacity=".95"/>
+  <text x="172" y="289" text-anchor="middle" fill="#0E2236" font-weight="700" font-size="20" letter-spacing="3">YOUR LOGO</text>
+  <!-- floor sweep -->
+  <rect x="40" y="448" width="260" height="16" fill="#26303B"/>
+  <rect x="420" y="448" width="260" height="16" fill="#26303B"/>
+  <!-- floor -->
+  <rect y="464" width="720" height="56" fill="#C8D0D9"/>
+  <path d="M0 464.5H720" stroke="#98A4B0" stroke-width="2"/>
+  <path d="M0 488H720" stroke="#B9C2CC"/>
+  <!-- end stops -->
+  <rect x="34" y="68" width="8" height="14" fill="#1F2730"/>
+  <rect x="678" y="68" width="8" height="14" fill="#1F2730"/>
+</svg>

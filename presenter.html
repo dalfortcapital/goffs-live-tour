@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presenter · Goff's Live Tour</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2236'/%3E%3Cpath d='M8 24V9h16v15M8 14h16M11 18h10M11 21h10' stroke='%23F5B700' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="console">
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">GOFF’S</span><span class="brand-sub">Live Tour</span></a>
+    <span class="demo-chip">Demo</span>
+    <div class="session">
+      <span class="session-label">Client code</span>
+      <button id="code" class="code" title="Copy client code"></button>
+    </div>
+    <div id="status" class="status is-wait"><span class="dot"></span><span id="statusText">Connecting…</span></div>
+    <div class="topbar-actions">
+      <button id="openClient" class="btn btn-ghost" data-icon="monitor">Open customer window</button>
+      <button id="inviteBtn" class="btn btn-primary" data-icon="link">Invite customer</button>
+    </div>
+  </header>
+
+  <main class="console-main">
+    <section class="stage-col">
+      <div class="stage-frame"><div id="stage" aria-live="polite"></div></div>
+      <div class="controls">
+        <button id="backBtn" class="btn btn-ghost" data-icon="arrowLeft">Back</button>
+        <div class="where">
+          <span id="where" class="where-title"></span>
+          <span id="upNext" class="where-next"></span>
+        </div>
+        <label class="jump"><span>Jump to</span><select id="jump"></select></label>
+        <button id="nextBtn" class="btn btn-primary btn-next">Next <span data-icon="arrowRight"></span></button>
+      </div>
+      <p class="kbd-hint">Keys: <kbd>←</kbd> <kbd>→</kbd> to move · <kbd>1</kbd>–<kbd>9</kbd> to pick an answer, hotspot or photo</p>
+    </section>
+
+    <aside class="side">
+      <section class="panel">
+        <h3 data-icon="info">Talk track</h3>
+        <div id="notes" class="notes"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h3 data-icon="users">Session</h3>
+          <button id="editSession" class="link-btn">Edit</button>
+        </div>
+        <p id="sessionMeta" class="session-meta"></p>
+        <label class="toggle"><input type="checkbox" id="allowCustomer"><span class="track"></span><span>Let the customer tap answers</span></label>
+        <button id="resetBtn" class="link-btn danger">Start over</button>
+      </section>
+      <section class="panel panel-grow">
+        <h3 data-icon="check">Captured so far</h3>
+        <div id="captured" class="captured"></div>
+      </section>
+      <section class="panel">
+        <h3 data-icon="download">Lead summary</h3>
+        <div class="lead-actions">
+          <button id="copyLead" class="btn btn-ghost btn-sm" data-icon="copy">Copy</button>
+          <button id="csvLead" class="btn btn-ghost btn-sm" data-icon="download">CSV</button>
+          <button id="mailLead" class="btn btn-ghost btn-sm" data-icon="mail">Email</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="startDlg" class="dlg">
+    <form id="startForm" method="dialog">
+      <h2>Start a live tour</h2>
+      <p class="dlg-sub">Both are optional. They personalize the customer’s screen.</p>
+      <label class="fld"><span>Your name</span><input id="repName" maxlength="60" placeholder="e.g., Jordan Smith" autocomplete="off"></label>
+      <label class="fld"><span>Customer company</span><input id="company" maxlength="80" placeholder="e.g., Midwest Cold Storage" autocomplete="off"></label>
+      <div class="dlg-actions">
+        <button type="button" id="skipStart" class="btn btn-ghost">Skip</button>
+        <button type="submit" class="btn btn-primary">Start tour</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="inviteDlg" class="dlg dlg-invite">
+    <button class="dlg-x" data-close aria-label="Close">×</button>
+    <h2>Invite your customer</h2>
+    <div class="invite-grid">
+      <div>
+        <p class="step"><b>1</b> Send them this link, or have them scan the code.</p>
+        <div class="copy-row"><input id="inviteLink" readonly><button id="copyLink" class="btn btn-primary btn-sm" data-icon="copy">Copy</button></div>
+        <p class="step"><b>2</b> Or have them go to the join page and enter</p>
+        <div id="inviteCode" class="big-code"></div>
+        <p class="step"><b>3</b> Their screen follows yours from then on.</p>
+        <button id="openClient2" class="btn btn-ghost btn-sm" data-icon="monitor">Try it yourself in a second window</button>
+      </div>
+      <div class="qr-box"><div id="qr"></div><span>Scan to join</span></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="assets/js/presenter.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Join your tour · Goff's Live Tour</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2236'/%3E%3Cpath d='M8 24V9h16v15M8 14h16M11 18h10M11 21h10' stroke='%23F5B700' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+</head>
+<body class="client">
+  <section id="joinView" class="join" hidden>
+    <div class="join-card">
+      <div class="stripes stripes--top"></div>
+      <div class="wordmark"><b>GOFF’S</b><span>Performance Solutions</span></div>
+      <h1>Join your live tour</h1>
+      <p>Enter the 6-character code from your Goff’s rep.</p>
+      <form id="joinForm" autocomplete="off">
+        <input id="codeInput" class="code-input" inputmode="text" autocapitalize="characters" spellcheck="false" maxlength="8" placeholder="K7M4QX" aria-label="Client code">
+        <button class="btn btn-primary btn-lg" type="submit">Join tour <span data-icon="arrowRight"></span></button>
+      </form>
+      <p id="joinMsg" class="join-msg" role="alert"></p>
+    </div>
+    <p class="join-foot">Demo built for Goff’s Performance Solutions · <a href="./">About this demo</a></p>
+  </section>
+
+  <section id="liveView" class="live" hidden>
+    <div id="stage"></div>
+    <div id="waiting" class="waiting">
+      <div class="waiting-card">
+        <div class="spinner"></div>
+        <h2 id="waitTitle">Connecting to your rep…</h2>
+        <p id="waitText"></p>
+        <span id="waitCode" hidden></span>
+      </div>
+    </div>
+    <div id="livePill" class="live-pill is-connecting"><span class="dot"></span><span id="liveWith">Connecting</span><span class="via">· <span id="liveVia"></span></span></div>
+    <div class="rotate-hint" data-icon="refresh">Turn your phone sideways for the best view</div>
+  </section>
+
+  <script type="module" src="assets/js/client.js"></script>
+</body>
+</html>
